@@ -30,7 +30,7 @@ Que tal levar um pouco de felicidade para o mundo?
 ## Feito por
 <table>
   <tr>
-    <td align="center"><img style="border-radius: 50%;" src="" width="100px;" alt="https://avatars3.githubusercontent.com/u/17271215?s=60&v=4"/><br /><sub><b><a href="https://www.linkedin.com/in/toniolo-leonardo/" title="Leonardo">Leonardo Pereira Toniolo</a></b></sub><br/>Desenvolvedor</td>
+    <td align="center"><img style="border-radius: 50%;" src="" width="100px;" alt="https://avatars3.githubusercontent.com/u/17271215?s=60&amp;v=4"/><br /><sub><b><a href="https://www.linkedin.com/in/toniolo-leonardo/" title="Leonardo">Leonardo Pereira Toniolo</a></b></sub><br/>Desenvolvedor</td>
   </tr>
 </table>
 
