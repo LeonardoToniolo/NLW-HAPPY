@@ -54,7 +54,7 @@ Que tal levar um pouco de felicidade para o mundo?
 ## Feito por
 <table>
   <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/17271215?s=60&v=4" width="100px;" alt=""/><br /><sub><b><a href="https://www.linkedin.com/in/toniolo-leonardo/" title="Leonardo Toniolo">Leonardo Pereira Toniolo</a></b></sub><br/>Desenvolvedor Web</td>
+    <td align="center"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/17271215?s=460&v=4" width="100px;" alt=""/><br /><sub><b><a href="https://www.linkedin.com/in/toniolo-leonardo/" title="Leonardo Toniolo">Leonardo Pereira Toniolo</a></b></sub><br/>Desenvolvedor Web</td>
   </tr>
 </table>
 
