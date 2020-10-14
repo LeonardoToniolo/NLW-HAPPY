@@ -12,7 +12,7 @@ export default {
       relations: ['images'],
     });
 
-    return response.json(orphanages_view.renderMany(orphanages));
+    return response.status(200).json(orphanages_view.renderMany(orphanages));
   },
 
   async show(request: Request, response: Response) {
@@ -20,11 +20,11 @@ export default {
 
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanage = await orphanagesRepository.findOneOrFail({
+    const orphanage = await orphanagesRepository.findOneOrFail(id, {
       relations: ['images'],
     });
-
-    return response.json(orphanages_view.render(orphanage));
+        
+    return response.status(200).json(orphanages_view.render(orphanage));
   },
 
   async create(request: Request, response: Response) {
@@ -53,7 +53,7 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends,
+      open_on_weekends: open_on_weekends === 'true',
       images,
     };
 
