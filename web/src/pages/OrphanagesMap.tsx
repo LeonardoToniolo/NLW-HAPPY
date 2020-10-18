@@ -21,11 +21,29 @@ function OrphanagesMap() {
 
     useEffect(() => {
         api.get('orphanages').then(response => {
-            console.log(response.data);
-            
             setOrphanages(response.data);
         });
     }, []);
+
+    navigator.geolocation.getCurrentPosition(
+        showLocation => {
+            let crd = showLocation.coords;
+            console.log('Your current position is:');
+            console.log(`Latitude : ${crd.latitude}`);
+            console.log(`Longitude: ${crd.longitude}`);
+            console.log(`More or less ${crd.accuracy} meters.`);
+        },
+        errorHandler => {
+            console.log(errorHandler);
+        },
+        
+        {
+            enableHighAccuracy: true, 
+            maximumAge        : 30000, 
+            timeout           : 27000
+        }
+        
+    );
 
     return (
        <div id="page-map">
