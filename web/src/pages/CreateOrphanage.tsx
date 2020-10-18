@@ -12,10 +12,12 @@ import '../styles/pages/create-orphanage.css';
 
 export default function CreateOrphanage() {
   const history = useHistory();
+  
 
   const [position, setPosition] = useState({latitude: 0, longitude: 0});
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
+  const [phone, setPhone] = useState('');
   const [instruction, setInstruction] = useState('');
   const [openingHours, setOpeningHours] = useState('');
   const [openOnWeekends, setOpenOnWeekends] = useState(true);
@@ -58,10 +60,12 @@ export default function CreateOrphanage() {
     data.append('name', name);
     data.append('latitude', String(latitude));
     data.append('longitude', String(longitude));
+    data.append('whatsapp', String(phone));
     data.append('about', about);
     data.append('instructions', instruction);
     data.append('opening_hours', openingHours);
     data.append('open_on_weekends', String(openOnWeekends));
+    data.append('approved', 'false');
     
     Images.forEach(image => {
       data.append('images', image);
@@ -69,13 +73,12 @@ export default function CreateOrphanage() {
     
 
     api.post('orphanages', data).then(() => {
-      alert('Cadastrado com sucesso!');
-      history.push('/app')
+      history.push("/complete");
     }).catch((e) => {
+		console.log(e);
+		
       alert(e)
     });
-
-
   }
 
   return (
@@ -123,10 +126,19 @@ export default function CreateOrphanage() {
             <div className="input-block">
               <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
               <textarea 
-                id="name" 
+                id="about" 
                 maxLength={300} 
                 value={about} 
                 onChange={event => setAbout(event.target.value)}
+              />
+            </div>
+
+			<div className="input-block">
+              <label htmlFor="phone">Número de Whatsapp (Apenas números)</label>
+			  <input 
+			  	id="phone" 
+                value={phone} 
+				onChange={event => setPhone(event.target.value)}
               />
             </div>
 
